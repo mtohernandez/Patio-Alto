@@ -116,3 +116,31 @@ La dashboard es el menú principal donde se pueden visualizar todos los vuelos y
 • Permite cancelar la operación volviendo a la dashboard.
 
 
+## Requerimientos Instruccionales
+
+**Diseño del programa**
+
+Cada cuadro representa un Form, el login como el registro se encuentran conectados se puede pasar del uno al otro las veces deseadas. Una vez registrado no se puede cerrar el login y se pasa directamente a la dashboard donde se puede visualizar la data o pasar a los otros Forms de agregar, modificar y eliminar tanto vuelos como usuarios. Los Forms de agregar y modificar, al igual el Form de reclamos se conectan a el servidor STMP de Gmail en un puerto especifico para enviar un correo a las personas que van ingresado o dejando la base de datos y los reclamos se enviar al correo de la empresa.
+
+![](Patio-Alto/map.png)
+
+**General:**
+
+En todos los Form se hace una regla y es que no se aceptan campos en blanco, si el administrador no selecciona un vuelo o pasajero no podrá agregarlo a la base de datos. No se permiten IDs o usuarios duplicados, el programa verifica cada que se ingresa un dato si ya esta en la base de datos.
+
+**Vuelos:**
+
+Los estados de los vuelos son importantes, cuando un vuelo se crea es recomendado agregarlo en DISPONIBLE para que todos los usuarios que se asignen a ese vuelo se creen en estado NORMAL, al momento de pasar al estado de vuelo NO DISPONIBLE, automáticamente se pasan todas las personas del vuelo a PENDIENTE y viceversa. Cada vez que se añade o elimina un pasajero se agrega o resta una unidad a la cantidad de puestos disponibles del vuelo, si llega a su máximo o a cero no se podrán agregar más pasajeros al vuelo.
+
+**Pasajeros:**
+
+Los pasajeros tienen cuatro estados: VPERDIDO, PENDIENTE, NORMAL y NEUTRO, VPERDIDO es cuando la persona estaba asociada a ese vuelo y el vuelo se elimina, PENDIENTE es cuando el vuelo pasa a NO DISPONIBLE, NORMAL cuando se añade normalmente y NEUTRO cuando solo vienen de visita al aeropuerto. Se envía un email cada que se añade un pasajero al sistema, se presentan errores cuando no se añada o se ingrese un email falso.
+
+**Overall:**
+
+El programa a sido comprobado en cada aspecto, sin embargo, hay algunos bugs, errores presentados: (a mejorar). No se hace siempre el llenado de los datos cuando se selecciona un pasajero o vuelo. Se pueden presentar errores externos con el servidor de GMAIL y no se lleguen a añadir las personas a la base de datos. Se puede acceder a los otros Form si se abren todos al mismo tiempo, lo cual puede resultar en perdida o no organización de datos,
+
+**Implementación:**
+
+Para lograr el funcionamiento se hizo uso de SSMS (sql server management studio) para la creación de la base de datos y las tablas, al igual el uso de las consultas. WinForms para la interfaz grafica y el acceso a las diferentes partes de la aplicación.
+
