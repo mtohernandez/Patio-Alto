@@ -1,0 +1,10 @@
+Hola Profe!
+
+Inicialmente queria llamar el programa HIGH GARDEN, pero luego de pensarlo patio alto suena mejor.
+
+Aun no estoy seguro si usted podra correr el programa, ya que esta conectado con una base de datos SQL local. En caso de que no, deje el
+query que use para crear los datos, utilice sql management studio.
+
+Para acceder a los archivos:
+Carpeta HIGH GARDEN.
+
