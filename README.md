@@ -122,7 +122,8 @@ La dashboard es el menú principal donde se pueden visualizar todos los vuelos y
 
 Cada cuadro representa un Form, el login como el registro se encuentran conectados se puede pasar del uno al otro las veces deseadas. Una vez registrado no se puede cerrar el login y se pasa directamente a la dashboard donde se puede visualizar la data o pasar a los otros Forms de agregar, modificar y eliminar tanto vuelos como usuarios. Los Forms de agregar y modificar, al igual el Form de reclamos se conectan a el servidor STMP de Gmail en un puerto especifico para enviar un correo a las personas que van ingresado o dejando la base de datos y los reclamos se enviar al correo de la empresa.
 
-![](Patio-Alto/map.png)
+
+<img src="Patio%20Alto/map.png" width="500">
 
 **General:**
 
